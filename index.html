@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+        /* .mdl-cell {
+            box-sizing: border-box;
+            background-color: #BDBDBD;
+            opacity: 0.5;
+            height: 200px;
+            padding-left: 8px;
+            padding-top: 4px;
+            color: white; 
+        }  */
+
+
+        @media (max-width: 512px)  and (min-resolution: 1.5dppx),
+       (max-width: 1024px) and (max-resolution: 1.5dppx) {
+        .image-card {
+            font-family: cursive;
+            margin: 10px;
+            width:40%; 
+            
+        }
+       }
+        @media (min-width: 512px)  {
+        .image-card {
+            font-family: cursive;
+            margin: 10px;
+            width:30%; 
+            
+        }   
+            }
+
+
+            
+        .mdl-layout {
+            /* https://picsum.photos/1080/720/?random */
+            background: url("images/title.jpg") center; 
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .welcome-text {
+            background-color: rgba(209, 199, 199, 0.4);
+            font-family: cursive;
+            margin: 0px;
+            height: 500px;
+            width:100%;
+           
+            
+        }
+
+        /* .image-card {
+            font-family: cursive;
+            margin: 20px;
+            width:30%;
+            margin-left: 0;
+        } */
+
+        .image-card:hover {
+            box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+        }
+
+        .content-grid {
+            justify-content: center;
+            
+            
+        }
+
+        /* .content-grid.mdl-grid{
+            margin:10px;
+        } */
+       
+        .mdl-card__media{
+            align-items: flex-end;
+            display: flex;
+            flex-direction: row;
+            cursor: pointer
+            
+        }
+        .cat1{
+            height: 200px;
+            background: url("https://picsum.photos/1080/720/?random") center / cover;
+            
+            
+            
+        }
+
+        .cat2{
+            height: 200px;
+            background: url("images/pre-wed.jpg") center / cover;
+            background-blend-mode:luminosity    ;
+        }
+        .cat3{
+            height: 200px;
+            background: url("images/candid.jpg") center / cover;
+        }
+        .cat4{
+            height: 200px;
+            background: url("images/pre-wed.jpg") center / cover;
+        }
+
+        .cat5{
+            height: 200px;
+            background: url("images/stage-event.jpg") center / cover;
+        }
+        .cat6{
+            height: 200px;
+            background: url("images/else.jpg") center / cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="custom-header mdl-layout__header mdl-layout__header--waterfall">
+            <div class="mdl-layout__header-row">
+
+                <span class="mdl-layout-title">Sanket</span>
+
+                <div class="mdl-layout-spacer"></div>
+                <!--filler-->
+
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="#content-grid">Discover</a>
+                    <a class="mdl-navigation__link" href="">About</a>
+                    <a class="mdl-navigation__link" href="">Contact us</a>
+                    <a class="mdl-navigation__link" href="">Link</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Sidebar Menu</span>
+            <nav class="mdl-navigation">
+                <a id="discover" class="mdl-navigation__link" href="">Discover</a>
+                <a class="mdl-navigation__link" href="">About</a>
+                <a class="mdl-navigation__link" href="">Contact us</a>
+                <a class="mdl-navigation__link" href="">Link</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <p class="welcome-text mdl-card__supporting-text">
+                    Hi there!
+                    <br> Welcome to my website!
+                    <br> Take a look around. blah blah blah.
+                </p>
+
+                <div class="content-grid mdl-grid" id="content-grid">
+                    <div class="image-card mdl-card mdl-shadow--4dp mdl-cell-4-col">
+                            <div class="mdl-card__media cat1">
+                                    <h3>Wedding</h3>
+                                </div>
+                        <div class="mdl-card__supporting-text">
+                            Hi there!
+                        </div>
+                    </div>
+
+                    <div class="image-card mdl-card mdl-shadow--4dp mdl-cell-4-col">
+                        <!-- <div class="mdl-card__title">
+                            <h2 class="mdl-card__title-text">Welcome</h2>
+                        </div> -->
+                        <div class="mdl-card__media cat2">
+                            <h3>Pre-wedding</h3>
+                        </div>
+                        <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+                            <strong>Hi there</strong> 
+                        </div>
+                    </div>
+                    <div class="image-card mdl-card mdl-shadow--4dp mdl-cell-4-col">
+                        <div class="mdl-card__media cat3">
+                            <h3>Candid</h3>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            Hi there!
+                        </div>
+                    </div>
+                    <div class="image-card mdl-card mdl-shadow--4dp mdl-cell-4-col">
+                        <div class="mdl-card__media cat4">
+                            <h3>Birthday</h3>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            Hi there!
+                        </div>
+                    </div>
+                    <div class="image-card mdl-card mdl-shadow--4dp mdl-cell-4-col">
+                        <div class="mdl-card__media cat5">
+                            <h3>Stage events</h3>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            Hi there!
+                        </div>
+                    </div>
+                    <div class="image-card mdl-card mdl-shadow--4dp mdl-cell-4-col">
+                        <div class="mdl-card__media cat6">
+                            <h3>Something else?</h3>
+                        </div>
+                        <div class="mdl-card__supporting-text">
+                            You just name it and we got it
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+</body>
